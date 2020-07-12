@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas 3-Form</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <form action="form.php" method="POST">
-        <label for="name">Nama &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp; </label>
+<body style="background-image: url(aqars.jpeg);">
+    <marquee  behavior="right" direction="alternate"><center><h2 style="color: rgb(226, 23, 23); strong; background-color: cyan; margin-top: 0;">FORMULIR MEMBER FANCARD AqAr.s</h2></center></marquee>
+    <p class="bag">Isilah Formulir dibawah ini dengan benar: </p>
+    <form  method="POST" name="form1" action="form.php">
+        <label for="name"><font style="color:rgb(11, 252, 152) ">Nama   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp; </font></label>
         <input type="text" id="name" name="name" maxlength="30" size="30"><br><br>
 
-         <label for="gender">Jenis Kelamin&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;</label>
+         <label for="gender" name="gender"><font style="color:rgb(11, 252, 152)">Jenis Kelamin&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;</font></label>
         <input type="radio" id="male" name="gender" value="male">
-        <label for="male">  Pria&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+        <label for="male" name="gender"> <font style="color:rgb(11, 252, 152)">Pria&emsp;&emsp;&emsp;&emsp;&emsp;</font> </label>
         <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Wanita</label><br><br>
+        <label for="female" name="gender"> <font style="color:rgb(11, 252, 152)">Wanita</font></label><br><br>
 
-        <label for="Agama">Agama&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;</label>
+        <label for="Agama"> <font style="color:rgb(11, 252, 152)">Agama&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;</font></label>
     <select id="Agama" name="Agama">
     <option value="Kosong"></option>
     <option value="Islam">Islam</option>
@@ -27,17 +29,35 @@
     <option value="Katolik">Katolik</option>
     <option value=" Konghucu ">Konghucu</option>
       </select><br><br>
-      <label for="message">Prestasi yang pernah diraih:</label>
+      <label for="message"><font style="color:rgb(11, 252, 152)">Alamat&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;</font></label>
       <br>
      <label for="o">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-      <textarea name="message" rows="8" cols="40"> <<Text Area>>  </textarea>
+      <textarea name="message" rows="8" cols="40"></textarea>
   <br><br>
 
-  <label for="o">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+  <label for="o">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label><br>
+  <label for="hp"><font style="color:rgb(11, 252, 152)">No. HP &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp; </font></label>
+    <input type="text" id="hp" name="hp" maxlength="12" size="13"><br><br>
+    <label for="tgl"><font style="color:rgb(11, 252, 152)">Tanggal Lahir &emsp;&emsp;&emsp;&emsp;&emsp;:&emsp; </font></label>
+    <input type="text" id="tgl" name="tgl" maxlength="10" size="10" placeholder="DD/MM/YYYY"><br><br>
+    <label for="email"><font style="color:rgb(11, 252, 152)">Email &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp;</font> </label>
+    <input type="text" id="email" name="email" maxlength="30" size="30"><br><br>
+    <label for="jkr"><font style="color:rgb(11, 252, 152)">Jenis Kartu &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&emsp; </font></label>
+    <input type="text" id="jkr" name="jkr" maxlength="7" size="7" placeholder="Reguler/VIP"><br><br>
+  
 
-  <input type="submit">
-  <button type="button">Batal</button>
+  <button class="tombol tombol_green" type="submit" name="Submit" value="Kirim">Submit</button>
+<button class="tombol tombol_red type="reset" name="Submit2" value="Batal">reset</button>
 
+<p> Jam </p>
+<p id="demo"></p>
+<script>
+
+var d = new Date();
+d.setHours(22);
+document.getElementById("demo").innerHTML = d;
+
+</script>
       </form>
 </body>
 </html>
